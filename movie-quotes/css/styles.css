@@ -1,0 +1,58 @@
+body {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px 250px 50px 250px;
+    font-family: sans-serif;
+}
+
+header {
+    text-align: center;
+    color:rgb(57, 112, 190);
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    
+    list-style-type: none;
+    background-color: rgb(245, 244, 244);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.description {
+    font-style: italic;
+    background-color: rgb(254, 248, 203);
+    width: fit-content;
+}
+
+.speaker {
+    font-weight: 600;
+}
+
+#peter {
+    color: rgb(77, 77, 201);
+}
+
+#dana {
+    color: rgb(91, 68, 68);
+}
+
+#mayor {
+    color: rgb(54, 161, 120);
+}
+
+#ray {
+    color: rgb(4, 143, 165);
+}
+
+#egon {
+    color: rgb(176, 103, 115);
+}
+
+#winston {
+    color: rgb(158, 91, 158);
+}
