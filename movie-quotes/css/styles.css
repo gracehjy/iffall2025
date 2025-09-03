@@ -3,11 +3,12 @@ body {
     width: 100%;
     padding: 20px 250px 50px 250px;
     font-family: sans-serif;
+    background-color: #2d2d2d;
 }
 
 header {
     text-align: center;
-    color:rgb(57, 112, 190);
+    color:white;
 }
 
 ul {
@@ -17,7 +18,7 @@ ul {
 li {
     
     list-style-type: none;
-    background-color: rgb(245, 244, 244);
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
