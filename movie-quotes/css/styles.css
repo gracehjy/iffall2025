@@ -2,8 +2,8 @@ body {
     box-sizing: border-box;
     width: 100%;
     padding: 20px 250px 50px 250px;
-    font-family: sans-serif;
-    background-color: #2d2d2d;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: #1f222c;
 }
 
 header {
@@ -11,17 +11,20 @@ header {
     color:white;
 }
 
+img {
+    border-radius: 5px;
+}
+
 ul {
     padding: 0;
 }
 
 li {
-    
     list-style-type: none;
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
+    padding: 15px 30px;
     margin-bottom: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .description {
