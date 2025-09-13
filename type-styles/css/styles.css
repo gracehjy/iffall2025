@@ -1,0 +1,93 @@
+body {
+    font-family: "Crimson Text", serif;
+    font-size: 24px;
+    box-sizing: border-box;
+    padding: 45px 175px;
+    background-color: rgb(245, 250, 253);
+}
+
+h1 {
+    margin-bottom: 0;
+    color: rgb(36, 82, 83);
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+}
+
+small {
+    color: rgb(91, 131, 132);
+}
+
+.section-title {
+    margin-bottom: .5rem;
+    color: rgb(36, 82, 83);
+}
+
+.crimson-text-regular {
+  font-weight: 400;
+  font-style: normal;
+}
+
+.crimson-text-semibold {
+  font-weight: 600;
+  font-style: normal;
+}
+
+.crimson-text-bold {
+  font-weight: 700;
+  font-style: normal;
+}
+
+.crimson-text-regular-italic {
+  font-style: italic;
+}
+
+.crimson-text-regular-ls {
+  letter-spacing: normal;
+}
+
+.crimson-text-wide-ls {
+  letter-spacing: 0.25em;
+}
+
+.crimson-text-wider-ls {
+  letter-spacing: 0.5em;
+}
+
+.crimson-text-small-ls {
+  letter-spacing: -0.05em;
+}
+
+.crimson-text-regular-td {
+  text-decoration: none;
+}
+
+.crimson-text-underline-td {
+  text-decoration: underline;
+}
+
+.crimson-text-lt-td {
+  text-decoration: line-through;
+}
+
+.crimson-text-overline-td {
+  text-decoration: overline;
+}
+
+.crimson-text-regular-t {
+  text-transform: none;
+}
+
+.crimson-text-upper-t {
+  text-transform: uppercase;
+}
+
+.crimson-text-lower-t {
+  text-transform: lowercase;
+}
+
+.crimson-text-cap-t {
+  text-transform: capitalize;
+}
