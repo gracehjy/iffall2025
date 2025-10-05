@@ -1,0 +1,139 @@
+body {
+    font-family: "Archivo Narrow", sans-serif;
+    margin: 0;
+    padding: 0;
+    min-width: 100%;
+    color: rgb(247, 219, 189);
+}
+
+header {
+    text-align: center;
+    padding-top: 166px;
+    padding-bottom: 188px;
+    background-image: url(https://images.travelandleisureasia.com/wp-content/uploads/sites/5/2024/12/04163323/Chongqing-1-1600x900.jpg);
+    background-size: cover;
+    width: 100%;
+    min-width: 960px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 80px;
+    line-height: 1;
+}
+
+h2 {
+    margin: 0;
+    line-height: 1;
+    margin-top: 16px;
+    font-size: 30px;
+}
+
+.first-section {
+    background-color: rgb(210, 147, 74);
+    padding: 48px 0 58px 0;
+    display: block;
+    width: 100%;
+    min-width: 960px;
+}
+
+.content {
+    width: 960px;
+    margin: auto;
+    gap: 2px;
+}
+
+.first-section p {
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: -2px;
+}
+
+#train {
+    width: 400px;
+    height: 300px;
+    float: right;
+    border: rgb(247, 219, 189) solid 1.5px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+section h1 {
+    text-align: center; 
+    font-size: 40px;
+    margin-bottom: 38px;
+}
+
+
+.second-section {
+    background-color: rgb(185, 91, 68);
+    padding: 48px 0 58px 0;
+    width: 100%;
+    min-width: 960px;
+}
+
+.second-section img {
+    width: 200px;
+    height: 150px;
+    float: left;
+    margin-bottom: 24px;
+}
+
+ol {
+    width: 960px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+}
+
+ol li {
+    width: 100%;
+    list-style: none;
+    
+}
+
+.p-title {
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 212px;
+    margin-bottom: 7px;
+}
+
+.p-text {
+    padding-right: 24px;
+    font-size: 18px;
+    padding-left: 212px;
+    line-height: 1.4;
+}
+
+.third-section {
+    background-color: rgb(138, 171, 152);
+    padding: 30px 0 74px 0;
+    width: 100%;
+    min-width: 960px;
+    text-align: center;
+}
+
+.container{
+    width: 720px;
+    margin: auto;
+}
+
+.third-section p {
+    font-size: 26px;
+    line-height: 1.4;
+}
+
+footer {
+    background-color: rgb(82, 68, 56);
+    min-width: 960px;
+    width: 100%;
+    padding: 40px 0 40px 0;
+}
+
+footer p {
+    width: 960px;
+    margin: auto;
+    font-size: 18px;
+}
