@@ -1,0 +1,324 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Playfair Display", serif;
+    font-size: 16px;
+    background-color: #ebe2d9;
+    color: #554633;
+    text-align: center;
+
+}
+
+.content {
+    padding: 25px 320px 0 320px; 
+}
+
+header {
+    margin-bottom: 1rem;
+}
+
+header p {
+    margin-bottom: 0.5rem;
+}
+
+h1, h2 {
+    margin-bottom: 0.75rem;
+    color: #271f16;
+}
+
+hr {
+    color: #271f16;
+    border-color:#271f16;
+    margin-top: 2rem;
+}
+
+#main-image img{
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid rgb(87, 57, 44);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.info-box {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    padding: 15px;
+    margin: 20px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.time-item {
+    flex: 1;
+    text-align: center;
+}
+
+.info-box i {
+    margin-right: 8px;
+    color: rgb(87, 57, 44);
+}
+
+.ingredients-title, .dough-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #271f16;
+    display: inline;
+}
+
+.ingredient-box {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+#ingreds, #making-dough {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.ingredients-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.ingredient-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.ingredient-item input[type="checkbox"] {
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.ingredient-item label {
+    text-align: left;
+    line-height: 1.4;
+}
+
+.steps {
+    margin: 20px 0;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.step-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.step-item .circle {
+    width: 25px;
+    height: 25px;
+    background-color: rgb(87, 57, 44);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+
+.step-item p {
+    margin: 0;
+    text-align: left;
+    line-height: 1.4;
+}
+
+.step-item img{
+    width: 85%;
+    border-radius: 5px;
+    border: 2px solid rgb(87, 57, 44);
+    margin-left: auto;
+    display: block;
+}
+
+.recipe-note {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-left: 4px solid rgb(87, 57, 44);
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+footer {
+    background-color: rgb(87, 57, 44);
+    width: 100vw; 
+    padding: 30px 0;
+    margin-top: 40px;
+    margin-bottom: 0;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+footer p {
+    color: white;
+    max-width: 960px;
+    margin: 0 auto;
+    font-size: 14px;
+    text-align: center;
+}
+
+a {
+    text-decoration: underline;
+    color: white;
+}
+
+a:hover{
+    color: rgb(218, 218, 218);
+}
+
+
+@media (max-width: 1200px) {
+    .content {
+        padding: 25px 150px 0 150px;
+    }
+    
+    footer {
+        margin-left: -50vw;
+        margin-right: -50vw;
+    }
+    
+    footer p {
+        padding: 0 150px;
+    }
+}
+
+@media (max-width: 900px) {
+    .content {
+        padding: 20px 80px 0 80px;
+    }
+    
+    .ingredients-grid,
+    .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .info-box {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .time-item {
+        text-align: center;
+    }
+
+    .step-item img {
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    footer p {
+        padding: 0 80px;
+    }
+}
+
+@media (max-width: 600px) {
+    .content {
+        padding: 15px 20px 0 20px;
+    }
+    
+    body {
+        font-size: 14px;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    .ingredients-title, .dough-title {
+        font-size: 1.2em;
+    }
+    
+    .info-box {
+        padding: 12px;
+        margin: 15px 0;
+    }
+    
+    .ingredient-box {
+        padding: 15px;
+        margin: 15px 0;
+    }
+    
+    .step-item .circle {
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+    }
+    
+    .step-item img {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .recipe-note {
+        padding: 12px;
+        margin: 15px 0;
+        font-size: 14px;
+    }
+    
+    footer p {
+        padding: 0 20px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    .content {
+        padding: 10px 15px 0 15px;
+    }
+    
+    body {
+        font-size: 13px;
+    }
+    
+    h1 {
+        font-size: 1.5em;
+    }
+    
+    .ingredients-title, .dough-title {
+        font-size: 1.1em;
+    }
+    
+    .info-box,
+    .ingredient-box {
+        padding: 10px;
+        margin: 10px 0;
+    }
+    
+    footer p {
+        padding: 0 15px;
+        font-size: 11px;
+    }
+}
