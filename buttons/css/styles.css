@@ -1,0 +1,370 @@
+body {
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin: 40px;
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.button_container {
+    border: 1px solid #ddd;
+    margin: 0 10px 10px 0;
+    padding: 20px;
+    width: 300px;
+    height: 300px;
+    float: left;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a#btn_spotify {
+    color: #1db954;
+    font-size: 4rem;
+    text-decoration: none;
+    display: block;
+    position: relative;
+}
+
+a#btn_spotify i {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transition: transform 1s ease;
+}
+
+a#btn_spotify i:hover {
+    color: #3ea161;
+    transform: translate(calc(-50% - 30px), -50%);
+}
+
+a#btn_spotify .spotify-label {
+    position: absolute;
+    top: 50%;
+    left: calc(50% + 10px);
+    transform: translateY(-50%) translateX(40px);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1db954;
+    opacity: 0;
+    transition: transform 1s ease;
+}
+
+a#btn_spotify i:hover + .spotify-label {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+    color: #3ea161;
+}
+
+a#btn_amazon {
+    background: #232f3e;
+    color: white;
+    font-size: 3rem;
+    display: block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+}
+
+a#btn_amazon i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+a#btn_amazon:hover {
+    background: #364557;
+    color: #FF9800;
+    transform: rotate(360deg);
+    transition: transform 1s;
+}
+
+a#btn_twitter {
+    background: #56cdf1;
+    color: white;
+    font-size: 1rem;
+    display: block;
+    position: relative;
+    padding: 15px 45px 15px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    font-weight: 600;
+    transition: scale 0.5s;
+}
+
+a#btn_twitter i {
+    position: absolute;
+    left: 65%;
+    font-size: 1.2rem;
+}
+
+a#btn_twitter:hover {
+    background: #4bb7d8;
+    scale: 1.1;
+    transition: scale 0.5s;
+}
+
+a#btn_apple {
+    background: #ffffff;
+    color: #505c65;
+    font-size: 3rem;
+    display: block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    box-shadow: 0 0 8px #696b6d;
+    transition: background 1s, color 0.5s, scale 0.5s;
+}
+
+a#btn_apple i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+a#btn_apple:hover{
+    color: rgb(255, 255, 255);
+    background: linear-gradient(135deg, 
+    #ff867a, 
+    #ffb3e2, 
+    #d97cff, 
+    #8d8cff, 
+    #51d1ff
+    );
+    scale: 1.1;
+    transition: scale 0.5s;
+}
+
+a#btn_lyft {
+    color: #ff00bf;
+    font-size: 2rem;
+    text-decoration: none;
+    font-family: 'Ubuntu';
+    position: relative;
+    padding: 8px 25px;
+    border-radius: 5px;
+    transition: color 0.5s;
+    overflow: hidden;
+}
+
+a#btn_lyft::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #ff00bf;
+    border-radius: 5px;
+    transition: width 0.5s ease;
+    z-index: -1;
+}
+
+a#btn_lyft:hover::before {
+    width: 100%;
+}
+
+a#btn_lyft:hover {
+    color: white;
+}
+
+a#btn_insta {
+    color: white;
+    background: linear-gradient(135deg,
+    #ffdc80, #f77737, #e1306c, #c13584, #833ab4
+    );
+    padding: 8px 2px;
+    border-radius: 17px;
+    display: block;
+    position: relative;
+    transition: scale 0.5s;
+}
+
+a#btn_insta i {
+    font-size: 3rem;
+}
+
+a#btn_insta:hover {
+    border: 2px solid #ff0080;
+    animation: borderPulse 2s ease-in-out infinite;
+    scale: 1.1;
+    transition: scale 0.5s;
+}
+
+/* source : https://stackoverflow.com/questions/8752835/with-css3-can-i-create-keyframes-that-make-border-pulse-in-and-out */
+
+@keyframes borderPulse {
+    0% {
+        border-color: #ff0080;
+        box-shadow: 0 0 5px #ff0080;
+    }
+    33% {
+        border-color: #ff8c00;
+        box-shadow: 0 0 10px #ff8c00;
+    }
+    66% {
+        border-color: #40e0d0;
+        box-shadow: 0 0 10px #40e0d0;
+    }
+    100% {
+        border-color: #ff0080;
+        box-shadow: 0 0 5px #ff0080;
+    }
+}
+
+a#btn_npr {
+    font-size: 2rem;
+    text-decoration: none;
+    font-family: 'Ubuntu';
+}
+
+.npr-content {
+    display: flex;
+    color: #000000;
+}
+
+.npr-n {
+    padding: 2px 0;
+    transition: all 0.5s ease;
+}
+
+.npr-p {
+    padding: 2px 0;
+    transition: all 0.5s ease;
+}
+
+.npr-r {
+    padding: 2px 0;
+    transition: all 0.5s ease;
+}
+
+a#btn_npr:hover .npr-n {
+    background: #ee3b25;
+    color: white;
+    padding: 2px 10px;
+}
+
+a#btn_npr:hover .npr-p {
+    background: #000000;
+    color: white;
+    padding: 2px 10px;
+}
+
+a#btn_npr:hover .npr-r {
+    background: #4066b1;
+    color: white;
+    padding: 2px 10px;
+}
+
+a#btn_facebook {
+    color: #1877f2;
+    font-size: 4rem;
+    display: block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+}
+
+a#btn_facebook .fb-label {
+    text-decoration: none;
+    font-size: 20px;
+    position: absolute;
+    top: 60%;
+    left: 60%;
+    opacity: 0;
+    transition: opacity 0.5s, text-shadow 0.5s;
+}
+
+a#btn_facebook i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: text-shadow 0.5s, transform 1s;
+}
+
+a#btn_facebook:hover i {
+    transform: translate(calc(-50% - 30px), -50%);
+    text-shadow:  0 0 2px #1877f2;
+}
+
+a#btn_facebook:hover .fb-label {
+    opacity: 1;
+    left: 50%;
+    text-shadow:  0 0 1px #1877f2;
+}
+
+a#btn_newyorker {
+    position: relative;
+    display: block;
+    padding: 30px 30px 10px 30px;
+}
+
+a#btn_newyorker img {
+    width: 100%;
+    position: relative;
+}
+
+a#btn_newyorker::before {
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 3px;
+    left: 50%;
+    bottom: 5px;
+    background-color: #000000;
+    transform: translateX(-50%);
+    transition: width ease-in-out 0.4s;
+    z-index: 10;
+}
+
+a#btn_newyorker:hover::before {
+    width: calc(100% - 60px);
+}
+
+a#btn_tesla {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 30px 10px 30px;
+}
+
+a#btn_tesla #tesla_black {
+    width: 50%;
+    position: relative;
+    transition: opacity 0.5s ease;
+}
+
+a#btn_tesla #tesla_red {
+    width: 50%;
+    opacity: 0;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.5s ease;
+}
+
+a#btn_tesla:hover #tesla_black {
+    opacity: 0;
+}
+
+a#btn_tesla:hover #tesla_red {
+    opacity: 1;
+}
