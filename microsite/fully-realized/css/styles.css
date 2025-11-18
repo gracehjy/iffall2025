@@ -1,0 +1,807 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+    background-color: #e5e3d4;
+}
+
+/* .navigation bar */
+.nav {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #800020;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    z-index: 999;
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.nav.scrolled {
+    background-color: rgba(128, 0, 32, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+.nav a {
+    float: none;
+    display: block;
+    color: #e6e1d3;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+    font-size: 13px;
+    font-family: "Stack Sans Text", sans-serif;
+    text-transform: uppercase;
+}
+
+.nav a:first-child {
+    margin-right: auto;
+    padding-left: 5%;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.nav #late {
+    padding-right: 5%;
+}
+
+.nav a:hover {
+    color: #c1bda8;
+}
+
+/* hides icon for big screens */
+.nav .icon {
+  display: none;
+}
+
+/* landing page image section */
+#landing_img {
+    width: 90%;
+    height: 750px;
+    display: block;
+    margin-left: 5%;
+    margin-right: 5%;
+    object-fit: cover;
+    object-position: center top;
+    filter: brightness(75%);
+}
+
+.main {
+    background-color: #800020;
+    padding-bottom: 4%;
+    position: relative;
+}
+
+.main h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #e6e1d3;
+    font-size: 5rem;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    margin: 0;
+    z-index: 10;
+    text-align: center;
+    white-space: nowrap;
+    width: max-content;
+}
+
+.main p {
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #e6e1d3;
+    font-size: 0.9rem;
+    font-family: "Stack Sans Text", sans-serif;
+    font-style: italic;
+    margin: 0;
+    z-index: 10; 
+    text-align: center;
+}
+
+/* landing page sections intros */
+
+.section-intro {
+    padding: 0 20%;
+    background-color: #e6e1d3;
+    color: #2a2e36;
+    text-align: center;
+}
+
+.section-intro h2 {
+    margin-top: 0;
+    padding-top: 8%;
+    font-family: "Playfair Display", serif;
+    font-size: 2.5rem;
+}
+
+.section-intro p {
+    font-family: "Stack Sans Text", sans-serif;
+    color: #2a2e36;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+/* cards section */
+.sections {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 5% 5%;
+    background-color: #e6e1d3;
+}
+
+.card {
+    border: 1.25px solid #2a2e36;
+    color: #2a2e36;
+    padding: 0;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    background-color: #76011e;
+    color: #e6e1d3;
+    p {
+        color: #e6e1d3;
+        opacity: 0.5;
+    }
+}
+
+.card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.8rem;
+    margin: 0 0 10px 0;
+    font-weight: 600;
+    padding: 30px 30px 0 30px;
+}
+
+.card p {
+    font-family: "Stack Sans Text", sans-serif;
+    font-size: 0.9rem;
+    margin: 0;
+    padding: 0 30px 30px 30px;
+    opacity: 0.9;
+}
+
+footer {
+    background-color: #800020;
+    color: #e6e1d3;
+    text-align: center;
+    font-size: 13px;
+    font-family: "Stack Sans Text", sans-serif;
+    text-transform: uppercase;
+}
+
+footer p {
+    margin:0;
+    padding: 25px;
+}
+
+/* making it responsive */
+
+@media (max-width: 1024px) {
+    .nav a:first-child {
+        padding-left: 5%;
+    }
+    
+    .nav #late {
+        padding-right: 5%;
+    }
+
+    .nav a {
+        font-size: 12px;
+        padding: 18px 12px;
+    }
+
+    #landing_img {
+        height: 600px;
+    }
+
+    .main h1 {
+        font-size: 4rem;
+    }
+
+    .section-intro {
+        padding: 0 15%;
+    }
+
+    .section-intro h2 {
+        font-size: 2rem;
+        padding-top: 10%;
+    }
+
+    .sections {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+@media (max-width: 767px) {
+    /* hide all links except for the logo */
+    .nav a:not(:first-child) {
+        display: none;
+    }
+    
+    .nav a.icon {
+        font-size: 20px;
+        float: right;
+        display: block;
+        padding: 20px 5% 20px 16px;
+    }
+
+    .nav.responsive {
+        display: block;
+        width: 100%;
+    }
+
+    .nav.responsive a:not(:first-child) {
+        display: block;
+    }
+
+    .nav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .nav.responsive a {
+        display: block;
+        text-align: left;
+        padding-left: 5%;
+    }
+
+    .nav.responsive a:hover {
+        background-color: #76011e;
+    }
+
+    #landing_img {
+        height: 400px;
+    }
+
+    .main h1 {
+        font-size: 3rem;
+    }
+
+    .main p {
+        top: 65%;
+    }
+
+    .sections {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 5% 5%;
+    }
+
+    .card {
+        padding: 30px 20px;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+        padding: 20px;
+    }
+}
+
+/* early careers page */
+.header-container {
+    padding: 5% 5%;
+    background-color: #e6e1d3;
+    margin: 0;
+    text-align: center;
+}
+
+.early-career_header {
+    font-family: "Playfair Display", serif;
+    font-size: 4rem;
+    color: #2a2e36;
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+}
+
+.header-container p {
+    font-family: "Stack Sans Text", sans-serif;
+    font-size: 0.9rem;
+    color: #2a2e36;
+    margin: 0 auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+
+.timeline {
+    padding: 3% 0;
+}
+
+.content {
+    padding: 2% 5%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.content img {
+    width: 30%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 10px solid #800020;
+}
+
+.content h2{
+    font-family: "Playfair Display", serif;
+    font-size: 2.5rem;
+    color: #2a2e36;
+    margin-top: 0;
+}
+
+.content p {
+    font-size: 0.9rem;
+    font-family: "Stack Sans Text", sans-serif;
+    color: #2a2e36;
+}
+
+.horizontal-line {
+    width: 60px;
+    height: 1px;
+    background-color: #2a2e36;
+}
+
+/* early careers responsive */
+@media (max-width: 1024px) {
+    .early-career_header {
+        font-size: 3rem;
+    }
+
+    .content {
+        gap: 25px;
+    }
+
+    .content img {
+        width: 35%;
+    }
+
+    .content h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .header-container {
+        padding: 8% 5%;
+    }
+
+    .content {
+        flex-direction: column;
+        gap: 20px;
+        padding: 5% 5%;
+        text-align: center;
+    }
+
+    .horizontal-line {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .content img {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+/* filmography page */
+.filmography {
+    padding: 3% 5%;
+}
+
+.filmography h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.5rem;
+    color: #2a2e36;
+    margin-top: 0;
+}
+
+/* image slider (SOURCE: https://www.codingnepalweb.com/responsive-image-slider-html-css-javascript/ */
+.container {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto 5% auto;
+}
+
+.slider-wrapper {
+    position: relative;
+}
+
+.slider-wrapper .slide-button {
+    position: absolute;
+    top: 50%;
+    outline: none;
+    border: none;
+    height: 50px;
+    width: 50px;
+    z-index: 5;
+    color: #fff;
+    display: flex;
+    cursor: pointer;
+    font-size: 2.2rem;
+    background: #800020;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.slider-wrapper .slide-button:hover {
+    background-color: rgba(128, 0, 32, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+.prev-slide {
+    left: -25px;
+    display: none;
+}
+
+.next-slide {
+    right: -25px;
+}
+
+.slider-wrapper .image-list {
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    gap: 18px;
+    font-size: 0;
+    list-style: none;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.slider-wrapper .image-list .image-item {
+    width: 280px;
+    height: 350px;
+    object-fit: cover;
+}
+
+/* image slider responsive */
+@media (max-width: 1024px) {
+    .slider-wrapper .slide-button {
+        display: none;
+    }
+
+    .slider-wrapper .image-list {
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .slider-wrapper .image-list .image-item {
+        width: 280px;
+        height: 380px;
+    }
+}
+
+/* gavin and stacey page */
+.gavin-header-container {
+    padding-bottom: 4%;
+    position: relative;
+
+}
+
+/* landing page image section */
+.gavin-header-container img {
+    width: 100%;
+    height: 790px;
+    display: block;
+    object-fit: cover;
+    object-position: center top;
+    filter: brightness(70%);
+}
+
+.gavin-header-container h1 {
+    position: absolute;
+    left: 5%;
+    top: 60%;
+    color: #e6e1d3;
+    font-size: 5rem;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    margin: 0;
+    z-index: 10;
+    text-align: center;
+    white-space: nowrap;
+    width: max-content;
+}
+
+.gavin-header-container p {
+    position: absolute;
+    top: 73%;
+    left: 5%;
+    max-width: 700px;
+    color: #e6e1d3;
+    font-size: 0.9rem;
+    font-family: "Stack Sans Text", sans-serif;
+    margin: 0;
+    z-index: 10; 
+    text-align: left;
+    font-style: italic;
+}
+
+.gavin-content {
+    padding: 2% 5%;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    column-gap: 25%;
+    row-gap: 5%;
+    align-items: start;
+}
+
+.gavin-content h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.5rem;
+    color: #2a2e36;
+    margin-top: 0;
+    white-space: nowrap;
+}
+
+.gavin-content p {
+    font-size: 0.9rem;
+    font-family: "Stack Sans Text", sans-serif;
+    color: #2a2e36;
+}
+
+.gavin-description img {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.gavin-description ul {
+    margin-left: 10px;
+    padding: 0;
+    font-size: 0.9rem;
+    font-family: "Stack Sans Text", sans-serif;
+    color: #2a2e36;
+}
+
+.gavin-description ul li {
+    margin-bottom: 12px;
+}
+
+#trailer {
+    font-family: "Playfair Display", serif;
+    font-size: 2.5rem;
+    color: #2a2e36;
+    margin-top: 5%;
+    text-align: center;
+}
+
+iframe {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+}
+
+/* Gavin & Stacey page responsive */
+@media (max-width: 1024px) {
+    .gavin-header-container h1 {
+        font-size: 4rem;
+        top: 55%;
+    }
+
+    .gavin-header-container p {
+        top: 68%;
+    }
+
+    .gavin-content h2 {
+        font-size: 2rem;
+    }
+
+    #trailer {
+        font-size: 2rem;
+        white-space: normal;
+        padding: 0 5%;
+    }
+
+    iframe {
+        width: 90%;
+        height: 400px;
+    }
+}
+
+@media (max-width: 767px) {
+    .gavin-header-container h1 {
+        font-size: 3rem;
+        top: 60%;
+        white-space: normal;
+        max-width: 90%;
+    }
+
+    .gavin-header-container p {
+        top: 70%;
+        max-width: 90%;
+    }
+
+    .gavin-content {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 315px;
+    }
+}
+
+@media (max-width: 450px) {
+    .gavin-header-container h1 {
+        text-align: left;
+    }
+
+    .gavin-header-container p {
+        top: 80%;
+    }
+}
+
+/* the late late show page */
+.late-header-container img {
+    width: 100%;
+    height: 790px;
+    display: block;
+    object-fit: cover;
+    object-position: center top;
+    filter: brightness(55%);
+}
+
+.late-header-container h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #e6e1d3;
+    font-size: 5rem;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    margin: 0;
+    z-index: 10;
+    text-align: center;
+    white-space: nowrap;
+    width: max-content;
+}
+
+.late-header-container p {
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #e6e1d3;
+    font-size: 0.9rem;
+    font-family: "Stack Sans Text", sans-serif;
+    margin: 0;
+    z-index: 10; 
+    text-align: center;
+    font-style: italic;
+}
+
+.late-content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10%;
+    padding: 10% 5%;
+    background-color: #e6e1d3;
+    align-items: start;
+}
+
+
+.late-text h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.5rem;
+    color: #2a2e36;
+    margin-top: 0;
+    margin-bottom: 5%;
+}
+
+.late-text p {
+    font-size: 0.9rem;
+    font-family: "Stack Sans Text", sans-serif;
+    color: #2a2e36;
+    line-height: 1.6;
+}
+
+.late-description {
+    margin-bottom: 20%;
+}
+
+.late-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-end;
+}
+
+.late-images img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* late late page responsive */
+@media (max-width: 1024px) {
+    .late-header-container img {
+        height: 600px;
+    }
+
+    .late-header-container h1 {
+        font-size: 4rem;
+    }
+
+    .late-content-wrapper {
+        gap: 40px;
+    }
+
+    .late-text {
+        padding-right: 20px;
+    }
+
+    .late-text h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .late-header-container img {
+        height: 400px;
+    }
+
+    .late-header-container h1 {
+        font-size: 3rem;
+        white-space: wrap;
+        max-width: 90%;
+        top: 30%;
+    }
+
+    .late-header-container p {
+        top: 43%;
+        max-width: 90%;
+    }
+
+    .late-content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 8% 5%;
+    }
+
+    .late-text {
+        border-right: none;
+        border-bottom: 1px solid #2a2e36;
+        padding-right: 0;
+    }
+
+    .late-images {
+        align-items: center;
+    }
+
+    .late-images img {
+        width: 100%;
+    }
+}
+
+
